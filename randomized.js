@@ -60,7 +60,7 @@ export default class Random{
     static pick(input, seed){
         let arr = [];
         if(typeof input == "string") arr = input.split("");
-        else if(typeof input == "number") arr = input.toString().split("");
+        else if(typeof input == "number") arr = input.toString().split("").filter(c => c !== ".");
         else if(Array.isArray(input)) arr = [...input];
         else if(typeof input == 'object') arr = Object.values(input);
         else return input
@@ -100,3 +100,4 @@ export default class Random{
         else return arr;
     }
 }
+

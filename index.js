@@ -58,7 +58,6 @@ module.exports = class Random{
         return seed ? __PRIVATE_RF(seed)() : Math.random();
     }
     static pick(input, seed){
-        
         let arr = [];
         if(typeof input == "string") arr = input.split("");
         else if(typeof input == "number") arr = input.toString().split("").filter(c => c !== ".");
@@ -101,3 +100,4 @@ module.exports = class Random{
         else return arr;
     }
 }
+
